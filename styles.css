@@ -1,0 +1,923 @@
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 5px 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+}
+ 
+
+.logo h1 {
+    font-size: 24px;
+    color: #c0c0c0; /* Prata substituindo o dourado */
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.logo p {
+    font-size: 12px;
+    color: #999; /* Tom mais claro */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555; /* Tom mais suave */
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: #a8a8a8; /* Prata mais escuro */
+}
+
+#carrinho-btn {
+    position: relative;
+    color: #555;
+}
+
+#carrinho-contador {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #a8a8a8; /* Prata mais escuro */
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+/* Banner Hero */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    width: 100%;
+    padding: 0 20%;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    color: #e0e0e0; /* Prata claro */
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    color: #d0d0d0; /* Prata mais claro */
+}
+
+.btn {
+    background-color: #a8a8a8; /* Prata mais escuro */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #909090; /* Tom mais escuro */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Produtos */
+.produtos {
+    padding: 100px 5%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.produtos h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #555; /* Tom mais suave */
+    position: relative;
+    display: inline-block;
+}
+
+.produtos h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #c0c0c0; /* Prata */
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.filtros {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filtros button {
+    background: none;
+    border: 1px solid #c0c0c0; /* Prata */
+    color: #777; /* Tom mais suave */
+    padding: 8px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.filtros button.ativo {
+    background-color: #c0c0c0; /* Prata */
+    color: white;
+}
+
+.filtros button:hover {
+    background-color: #a8a8a8; /* Prata mais escuro */
+    color: white;
+}
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.produto {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    position: relative;
+    border: 1px solid #e0e0e0; /* Borda prateada */
+}
+
+.produto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.produto-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.produto:hover .produto-img {
+    transform: scale(1.05);
+}
+
+.produto-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.produto-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555; /* Tom mais suave */
+}
+
+.produto-info p {
+    color: #777;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.produto-info .preco {
+    font-size: 20px;
+    color: #909090; /* Prata escuro */
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Sobre */
+.sobre {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+
+.sobre-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sobre-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-texto h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #555; /* Tom mais suave */
+    position: relative;
+}
+
+.sobre-texto h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #c0c0c0; /* Prata */
+    bottom: -10px;
+    left: 0;
+}
+
+.sobre-texto p {
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.sobre-imagem {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0; /* Borda prateada */
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.sobre-imagem:hover img {
+    transform: scale(1.05);
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+}
+
+/* Contato */
+.contato {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.contato-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contato h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #555; /* Tom mais suave */
+    position: relative;
+}
+
+.contato h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #c0c0c0; /* Prata */
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contato-content {
+    display: flex;
+    gap: 50px;
+}
+
+.contato-info, .contato-form {
+    flex: 1;
+}
+
+.contato-info h3, .contato-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #555; /* Tom mais suave */
+}
+
+.contato-info p {
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.horario-atendimento {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0; /* Borda prateada */
+}
+
+.horario-atendimento h4 {
+    color: #909090; /* Prata escuro */
+    margin-bottom: 10px;
+}
+
+.horario-atendimento p {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #c0c0c0; /* Prata */
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Carrinho de Compras */
+.carrinho-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.carrinho {
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0; /* Borda prateada */
+}
+
+.fechar-carrinho {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #777;
+    transition: color 0.3s;
+}
+
+.fechar-carrinho:hover {
+    color: #909090; /* Prata escuro */
+}
+
+.carrinho h2 {
+    margin-bottom: 20px;
+    color: #555; /* Tom mais suave */
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.carrinho-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.carrinho-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.carrinho-item-info {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.carrinho-item-info h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555; /* Tom mais suave */
+}
+
+.carrinho-item-info p {
+    color: #777;
+    font-size: 14px;
+}
+
+.carrinho-item-remover {
+    color: #ff6b6b;
+    cursor: pointer;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.carrinho-item-remover:hover {
+    color: #ff0000;
+}
+
+.frete-calculadora {
+    margin: 20px 0;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.frete-calculadora h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555; /* Tom mais suave */
+}
+
+#cep-input {
+    padding: 10px 15px;
+    width: 60%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+#frete-resultado {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#frete-resultado p {
+    margin-bottom: 5px;
+}
+
+.carrinho-total {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 16px;
+}
+
+.carrinho-total p {
+    margin-bottom: 10px;
+}
+
+.carrinho-total #carrinho-total {
+    font-size: 20px;
+    font-weight: bold;
+    color: #909090; /* Prata escuro */
+}
+
+.finalizar-compra {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #a8a8a8; /* Prata mais escuro */
+}
+
+.finalizar-compra:hover {
+    background-color: #909090; /* Tom mais escuro */
+}
+
+/* Botão Flutuante do WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+    color: #FFF;
+}
+
+/* Rodapé */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.rodape-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.rodape-section h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #c0c0c0; /* Prata */
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.rodape-section h3::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #c0c0c0; /* Prata */
+    bottom: 0;
+    left: 0;
+}
+
+.rodape-section ul {
+    list-style: none;
+}
+
+.rodape-section ul li {
+    margin-bottom: 10px;
+}
+
+.rodape-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 14px;
+}
+
+.rodape-section ul li a:hover {
+    color: #c0c0c0; /* Prata */
+}
+
+.rodape-section p {
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.rodape-section p i {
+    margin-right: 10px;
+    color: #c0c0c0; /* Prata */
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #ccc;
+    font-size: 18px;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #c0c0c0; /* Prata */
+}
+
+.rodape-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #777;
+    font-size: 14px;
+}
+
+.pagamento-methods {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.pagamento-methods i {
+    font-size: 24px;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.pagamento-methods i:hover {
+    color: #c0c0c0; /* Prata */
+}
+
+/* Notificações */
+.notificacao {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #a8a8a8; /* Prata mais escuro */
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 3000;
+    animation: slideIn 0.3s ease-out;
+}
+
+.notificacao.fade-out {
+    animation: fadeOut 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 0.5px;
+    }
+
+    .logo-img {
+        width: 100px;
+    }
+
+    .logo {
+        margin-bottom: -10px;
+        text-align: center;
+    }
+    .nav {
+        padding-top: -50px;
+    }
+
+    nav ul {
+        margin-top: -30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 5px 5px;
+    }
+
+    .hero-content {
+        padding: 0 10%;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .grade-produtos {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
+    .sobre-content, .contato-content {
+        flex-direction: column;
+    }
+
+    .sobre-imagem {
+        order: -1;
+        margin-bottom: 30px;
+    }
+
+    .contato-info {
+        margin-bottom: 30px;
+    }
+
+    .carrinho {
+        width: 95%;
+        padding: 20px;
+    }
+
+    #cep-input {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    #calcular-frete-btn {
+        width: 100%;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre, .contato {
+        padding: 60px 0;
+    }
+
+    .sobre-texto h2, .contato h2 {
+        font-size: 28px;
+    }
+
+    .produtos {
+        padding: 80px 5%;
+    }
+
+    .filtros button {
+        margin: 3px;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .grade-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+/* Estilos para o logo no header */
+.logo-img {
+    height: 180px; /* Altura ajustável conforme necessidade */
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.logo-img:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* Estilos para o logo no footer (opcional) */
+.footer-logo {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 5px;
+    filter: brightness(0) invert(1); /* Transforma o logo em branco para o footer escuro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 200px;
+    }
+    
+    .footer-logo {
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 200px;
+        width: 100%;
+    }
+
+    
+    header {
+        width: 100%;
+        height: 200px;
+    }
+    .footer-logo {
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .rodape-section{
+        justify-content: center;
+        align-items: center;
+    }
+    .logoroda{
+        display: flex;
+        flex-direction: ;
+    }
+}

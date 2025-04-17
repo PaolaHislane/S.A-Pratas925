@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Frete</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 500px; margin: 0 auto; padding: 20px; }
+        div { margin-bottom: 15px; }
+        label { display: inline-block; width: 120px; }
+        input { padding: 8px; width: 200px; }
+        button { padding: 10px 15px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+        #resultado { margin-top: 20px; padding: 10px; border: 1px solid #ddd; min-height: 50px; }
+    </style>
+</head>
+<body>
+    <h2>Calculadora de Frete</h2>
+    <div>
+        <label>CEP Origem:</label>
+        <input type="text" id="cepOrigem" placeholder="Ex: 01001000">
+    </div>
+    <div>
+        <label>CEP Destino:</label>
+        <input type="text" id="cepDestino" placeholder="Ex: 90210020">
+    </div>
+    <div>
+        <label>Peso (kg):</label>
+        <input type="number" id="peso" placeholder="Ex: 0.5" step="0.1">
+    </div>
+    <button onclick="calcularFrete()">Calcular Frete</button>
+    <div id="resultado"></div>
+
+    <script>
+        async function calcularFrete() {
+            const cepOrigem = document.getElementById('cepOrigem').value.replace(/\D/g, '');
+            const cepDestino = document.getElementById('cepDestino').value.replace(/\D/g, '');
+            const peso = document.getElementById('peso').value;
+            
+            if (!cepOrigem || !cepDestino || !peso) {
+                document.getElementById('resultado').innerHTML = 
+                    'Por favor, preencha todos os campos corretamente.';
+                return;
+            }
+
+            document.getElementById('resultado').innerHTML = 'Calculando...';
+            
+            try {
+                // Usando uma API de frete alternativa (simulada)
+                const resultado = await simularFrete(cepOrigem, cepDestino, peso);
+                
+                document.getElementById('resultado').innerHTML = 
+                    `Frete: R$ ${resultado.valor.toFixed(2)}<br>
+                     Prazo: ${resultado.prazo} dia(s)<br>
+                     Serviço: ${resultado.servico}`;
+            } catch (error) {
+                document.getElementById('resultado').innerHTML = 
+                    'Erro ao calcular o frete. Verifique os dados e tente novamente.';
+                console.error(error);
+            }
+        }
+
+        // Função de simulação - substitua por uma API real
+        async function simularFrete(cepOrigem, cepDestino, peso) {
+            // Esta é uma simulação - na prática, você usaria uma API real
+            // como Melhor Envio, Frete.com.br ou outra
+            
+            // Simula um tempo de resposta
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            // Valores simulados baseados na distância entre CEPs
+            const distancia = Math.abs(parseInt(cepDestino) - parseInt(cepOrigem));
+            const valorBase = Math.max(10, distancia / 100000);
+            const prazoBase = Math.max(3, distancia / 5000000);
+            
+            return {
+                valor: parseFloat((valorBase * peso).toFixed(2)),
+                prazo: Math.ceil(prazoBase),
+                servico: "PAC Simulado"
+            };
+            
+            /* Para usar uma API real, você precisaria:
+               1. Cadastrar-se no serviço (Melhor Envio, Frete.com.br, etc.)
+               2. Obter uma chave de API
+               3. Fazer uma requisição autenticada
+               4. Processar a resposta real
+            */
+        }
+    </script>
+</body>
+</html>
