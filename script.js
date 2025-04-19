@@ -7,7 +7,7 @@ const produtos = [
         categoria: "aneis",
         preco: 60.00,
         imagem: "anelinfinito.jpeg",
-        descricao: "Símbolo de eternidade em prata 950, perfeito para declarações de amor duradouras."
+        descricao: "Símbolo de eternidade em prata 925, perfeito para declarações de amor duradouras."
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const produtos = [
         categoria: "aneis",
         preco: 70.00,
         imagem: "anelpedra.jpeg",
-        descricao: "Pedra natural semipreciosa em destaque sobre prata 950, brilho que chama atenção."
+        descricao: "Pedra natural semipreciosa em destaque sobre prata 925, brilho que chama atenção."
     },
     {
         id: 3,
@@ -23,7 +23,7 @@ const produtos = [
         categoria: "aneis",
         preco: 80.00,
         imagem: "anelpedra2.jpeg",
-        descricao: "Duas pedras naturais harmoniosamente combinadas em prata 950, design exclusivo."
+        descricao: "Duas pedras naturais harmoniosamente combinadas em prata 925, design exclusivo."
     },
     {
         id: 4,
@@ -39,7 +39,7 @@ const produtos = [
         categoria: "aneis",
         preco: 70.00,
         imagem: "anelsolitario.jpeg",
-        descricao: "Clássico solitário em prata 950, elegância atemporal para noivas e formaturas."
+        descricao: "Clássico solitário em prata 925, elegância atemporal para noivas e formaturas."
     },
 
     // BERLOQUES
@@ -49,7 +49,7 @@ const produtos = [
         categoria: "berloques",
         preco: 60.00,
         imagem: "berloquecerveja.jpeg",
-        descricao: "Miniatura de caneca em prata 950, presente perfeito para amantes de cerveja."
+        descricao: "Miniatura de caneca em prata 925, presente perfeito para amantes de cerveja."
     },
     {
         id: 7,
@@ -57,7 +57,7 @@ const produtos = [
         categoria: "berloques",
         preco: 60.00,
         imagem: "berloqueestrela.jpeg",
-        descricao: "Estrela em prata 950, simboliza luz e proteção em pequenos detalhes."
+        descricao: "Estrela em prata 925, simboliza luz e proteção em pequenos detalhes."
     },
     {
         id: 8,
@@ -65,7 +65,7 @@ const produtos = [
         categoria: "berloques",
         preco: 110.00,
         imagem: "berloqueheineken.jpeg",
-        descricao: "Edição especial em prata 950 para colecionadores da marca cervejeira."
+        descricao: "Edição especial em prata 925 para colecionadores da marca cervejeira."
     },
     {
         id: 9,
@@ -73,7 +73,7 @@ const produtos = [
         categoria: "berloques",
         preco: 60.00,
         imagem: "Berloquenossasenhora.jpeg",
-        descricao: "Padroeira do Brasil em prata 950, fé e devoção em um pequeno amuleto."
+        descricao: "Padroeira do Brasil em prata 925, fé e devoção em um pequeno amuleto."
     },
     {
         id: 10,
@@ -81,7 +81,7 @@ const produtos = [
         categoria: "berloques",
         preco: 60.00,
         imagem: "berloque.jpeg",
-        descricao: "Modelo básico em prata 950 para iniciar sua coleção de berloques."
+        descricao: "Modelo básico em prata 925 para iniciar sua coleção de berloques."
     },
     {
         id: 11,
@@ -89,7 +89,7 @@ const produtos = [
         categoria: "berloques",
         preco: 35.00,
         imagem: "berloque1.jpeg",
-        descricao: "Design moderno em prata 950, peça para sua pulseira personalizada."
+        descricao: "Design moderno em prata 925, peça para sua pulseira personalizada."
     },
     {
         id: 12,
@@ -108,7 +108,7 @@ const produtos = [
         categoria: "brincos",
         preco: 75.00,
         imagem: "brincoargola4.jpeg",
-        descricao: "Argola em prata 950, diâmetro médio para looks equilibrados."
+        descricao: "Argola em prata 925, diâmetro médio para looks equilibrados."
     },
     {
         id: 15,
@@ -116,7 +116,7 @@ const produtos = [
         categoria: "brincos",
         preco: 20.00,
         imagem: "brinco2.jpeg",
-        descricao: "Brinco em prata 950, design versátil para múltiplas ocasiões."
+        descricao: "Brinco em prata 925, design versátil para múltiplas ocasiões."
     },
     {
         id: 16,
@@ -124,7 +124,7 @@ const produtos = [
         categoria: "brincos",
         preco: 80.00,
         imagem: "brincoargola2.jpeg",
-        descricao: "Argola especial em prata 950, modelo da coleção com detalhes exclusivos."
+        descricao: "Argola especial em prata 925, modelo da coleção com detalhes exclusivos."
     },
     {
         id: 17,
@@ -132,7 +132,7 @@ const produtos = [
         categoria: "brincos",
         preco: 40.00,
         imagem: "brincoargolaestrela.jpeg",
-        descricao: "Argola com detalhe estrelado em prata 950, brilho celestial em suas orelhas."
+        descricao: "Argola com detalhe estrelado em prata 925, brilho celestial em suas orelhas."
     },
     {
         id: 18,
@@ -140,7 +140,7 @@ const produtos = [
         categoria: "brincos",
         preco: 80.00,
         imagem: "brincoargola.jpeg",
-        descricao: "Clássico atemporal em prata 950, tamanho perfeito para uso diário."
+        descricao: "Clássico atemporal em prata 925, tamanho perfeito para uso diário."
     },
     {
         id: 19,
@@ -148,7 +148,7 @@ const produtos = [
         categoria: "brincos",
         preco: 60.00,
         imagem: "brincoargola1.jpeg",
-        descricao: "Modelo de argola em prata 950, diâmetro ideal para todos os estilos."
+        descricao: "Modelo de argola em prata 925, diâmetro ideal para todos os estilos."
     },
 
     {
@@ -157,7 +157,7 @@ const produtos = [
         categoria: "brincos",
         preco: 35.00,
         imagem: "brincoargola4.jpeg",
-        descricao: "Modelo de argola em prata 950, para quem busca variedade em acessórios."
+        descricao: "Modelo de argola em prata 925, para quem busca variedade em acessórios."
     },
     {
         id: 22,
@@ -165,7 +165,7 @@ const produtos = [
         categoria: "brincos",
         preco: 75.00,
         imagem: "brincoargolinha.jpeg",
-        descricao: "Versão mini em prata 950, delicadeza e sofisticação em tamanho reduzido."
+        descricao: "Versão mini em prata 925, delicadeza e sofisticação em tamanho reduzido."
     },
     {
         id: 23,
@@ -173,7 +173,7 @@ const produtos = [
         categoria: "brincos",
         preco: 50.00,
         imagem: "brincocoracao.jpeg",
-        descricao: "Forma de coração em prata 950, declaração de amor em forma de joia."
+        descricao: "Forma de coração em prata 925, declaração de amor em forma de joia."
     },
     {
         id: 24,
@@ -181,7 +181,7 @@ const produtos = [
         categoria: "brincos",
         preco: 50.00,
         imagem: "brincopedra.jpeg",
-        descricao: "Pedra natural em destaque sobre prata 950, brilho natural que encanta."
+        descricao: "Pedra natural em destaque sobre prata 925, brilho natural que encanta."
     },
     {
         id: 25,
@@ -189,7 +189,7 @@ const produtos = [
         categoria: "brincos",
         preco: 50.00,
         imagem: "brincotriodepedras.jpeg",
-        descricao: "Conjunto harmonioso em prata 950, três pedras que dançam a cada movimento."
+        descricao: "Conjunto harmonioso em prata 925, três pedras que dançam a cada movimento."
     },
     {
         id: 26,
@@ -197,7 +197,7 @@ const produtos = [
         categoria: "brincos",
         preco: 30.00,
         imagem: "brinco.jpeg",
-        descricao: "Modelo básico em prata 950, essencial para quem aprecia simplicidade elegante."
+        descricao: "Modelo básico em prata 925, essencial para quem aprecia simplicidade elegante."
     },
     {
         id: 27,
@@ -205,7 +205,7 @@ const produtos = [
         categoria: "brincos",
         preco: 100.00,
         imagem: "brinco1.jpeg",
-        descricao: "Brinco em prata 950, design versátil para diversas ocasiões."
+        descricao: "Brinco em prata 925, design versátil para diversas ocasiões."
     },
 
     // COLARES
@@ -215,7 +215,7 @@ const produtos = [
         categoria: "colares",
         preco: 110.00,
         imagem: "colarbolinha.jpeg",
-        descricao: "Bolinhas perfeitas de prata 950, minimalismo que nunca sai de moda."
+        descricao: "Bolinhas perfeitas de prata 925, minimalismo que nunca sai de moda."
     },
     {
         id: 29,
@@ -223,7 +223,7 @@ const produtos = [
         categoria: "colares",
         preco: 110.00,
         imagem: "colarcoracao.jpeg",
-        descricao: "Pingente coração em prata 950, carregue seu amor próximo ao peito."
+        descricao: "Pingente coração em prata 925, carregue seu amor próximo ao peito."
     },
     {
         id: 30,
@@ -231,7 +231,7 @@ const produtos = [
         categoria: "colares",
         preco: 130.00,
         imagem: "colarnossasenhoraaparecida.jpeg",
-        descricao: "Padroeira do Brasil em prata 950, proteção e fé em forma de joia."
+        descricao: "Padroeira do Brasil em prata 925, proteção e fé em forma de joia."
     },
     {
         id: 31,
@@ -239,7 +239,7 @@ const produtos = [
         categoria: "brincos",
         preco: 50.00,
         imagem: "medalhasaobento.jpeg",
-        descricao: "Brinco de prata 950, tradição beneditina contra energias negativas."
+        descricao: "Brinco de prata 925, tradição beneditina contra energias negativas."
     },
 
     // PULSEIRAS
@@ -249,7 +249,7 @@ const produtos = [
         categoria: "pulseiras",
         preco: 90.00,
         imagem: "pulseiracoracao.jpeg",
-        descricao: "Coração em prata 950, delicadeza que simboliza amor."
+        descricao: "Coração em prata 925, delicadeza que simboliza amor."
     },
     {
         id: 33,
@@ -257,7 +257,7 @@ const produtos = [
         categoria: "pulseiras",
         preco: 80.00,
         imagem: "pulseiracruz.jpeg",
-        descricao: "Símbolo cristão em prata 950, fé que acompanha seus movimentos."
+        descricao: "Símbolo cristão em prata 925, fé que acompanha seus movimentos."
     },
     {
         id: 34,
@@ -265,7 +265,7 @@ const produtos = [
         categoria: "pulseiras",
         preco: 45.00,
         imagem: "pulseirainfinito.jpeg",
-        descricao: "Laço infinito em prata 950, conexões que nunca se rompem."
+        descricao: "Laço infinito em prata 925, conexões que nunca se rompem."
     },
     {
         id: 35,
@@ -273,7 +273,7 @@ const produtos = [
         categoria: "pulseiras",
         preco: 80.00,
         imagem: "pulseiramedalha.jpeg",
-        descricao: "Medalha personalizável em prata 950, transforme em uma joia única."
+        descricao: "Medalha personalizável em prata 925, transforme em uma joia única."
     },
     {
         id: 36,
@@ -281,7 +281,7 @@ const produtos = [
         categoria: "pulseiras",
         preco: 115.00,
         imagem: "pulseiranossasenhoraaparecida.jpeg",
-        descricao: "Devocional em prata 950, proteção maternal em seu pulso."
+        descricao: "Devocional em prata 925, proteção maternal em seu pulso."
     },
     {
         id: 37,
@@ -295,9 +295,9 @@ const produtos = [
         id: 38,
         nome: "Pulseira Santissimo",
         categoria: "pulseiras",
-        preco: 0.00,
+        preco: 80.00,
         imagem: "pulseirasantissimo.jpeg",
-        descricao: "Símbolo eucarístico em prata 950, para fiéis que carregam sua fé."
+        descricao: "Símbolo eucarístico em prata 925, para fiéis que carregam sua fé."
     },
     {
         id: 39,
@@ -305,7 +305,7 @@ const produtos = [
         categoria: "pulseiras",
         preco: 80.00,
         imagem: "pulseira1.jpeg",
-        descricao: "Delicado e moderno na mesma peça em prata 950, essencial para colecionadores de joias."
+        descricao: "Delicado e moderno na mesma peça em prata 925, essencial para colecionadores de joias."
     },
     {
         id: 40,
@@ -313,7 +313,7 @@ const produtos = [
         categoria: "pulseiras",
         preco: 90.00,
         imagem: "pulseira2.jpeg",
-        descricao: "Um trevinho em prata 950 para quem gosta de delicadeza."
+        descricao: "Um trevinho em prata 925 para quem gosta de delicadeza."
     },
     {
         id: 41,
@@ -321,7 +321,7 @@ const produtos = [
         categoria: "pulseiras",
         preco: 75.00,
         imagem: "pulseira3.jpeg",
-        descricao: "Pedrinhas para quem gosta de modernidade em prata 950, complete seu conjunto de pulseiras."
+        descricao: "Pedrinhas para quem gosta de modernidade em prata 925, complete seu conjunto de pulseiras."
     },
 
     // TRIOS
@@ -329,17 +329,17 @@ const produtos = [
         id: 42,
         nome: "Trio brinco bolinha",
         categoria: "trios",
-        preco: 269.90,
+        preco: 80.00,
         imagem: "triobrincobolinha.jpeg",
-        descricao: "Conjunto de três tamanhos em prata 950, perfeito para múltiplas perfurações."
+        descricao: "Conjunto de três tamanhos em prata 925, perfeito para múltiplas perfurações."
     },
     {
         id: 43,
         nome: "Trio coração",
         categoria: "trios",
-        preco: 289.90,
+        preco: 80.00,
         imagem: "triocoracao.jpeg",
-        descricao: "Três corações em prata 950, declare seu amor em diferentes tamanhos."
+        descricao: "Três corações em prata 925, declare seu amor em diferentes tamanhos."
     },
     {
         id: 44,
@@ -347,7 +347,7 @@ const produtos = [
         categoria: "trios",
         preco: 319.90,
         imagem: "triopedrinha.jpeg",
-        descricao: "Pedras naturais em três designs em prata 950, harmoniosamente combinados."
+        descricao: "Pedras naturais em três designs em prata 925, harmoniosamente combinados."
     }
 ];
 // Carrinho e Variáveis Globais
