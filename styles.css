@@ -174,22 +174,37 @@ nav ul li a:hover {
 }
 
 .filtros {
-    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
 .filtros button {
-    background: none;
-    border: 1px solid #c0c0c0; /* Prata */
-    color: #777; /* Tom mais suave */
-    padding: 8px 20px;
-    margin: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s;
-    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.filtros button:hover {
+    background-color: #e8e8e8;
+}
+
+.filtros button img {
+    width: 80px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.filtros button i {
+    font-size: 16px;
 }
 
 .filtros button.ativo {
@@ -915,9 +930,5 @@ footer {
     .rodape-section{
         justify-content: center;
         align-items: center;
-    }
-    .logoroda{
-        display: flex;
-        flex-direction: ;
     }
 }
