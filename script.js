@@ -31,7 +31,7 @@ const produtos = [
         categoria: "aneis",
         preco: 100.00,
         imagem: "anelpedrinhas.jpeg",
-        descricao: "Múltiplas pedrinhas cintilantes em prata 950, efeito joalheiro sofisticado."
+        descricao: "Múltiplas pedrinhas cintilantes em prata 925, efeito joalheiro sofisticado."
     },
     {
         id: 5,
@@ -65,7 +65,7 @@ const produtos = [
         categoria: "berloques",
         preco: 110.00,
         imagem: "berloqueheineken.jpeg",
-        descricao: "Edição especial em prata 925 para colecionadores da marca cervejeira."
+        descricao: "Edição especial em prata 925para colecionadores da marca cervejeira."
     },
     {
         id: 9,
@@ -289,13 +289,13 @@ const produtos = [
         categoria: "pulseiras",
         preco: 60.00,
         imagem: "pulseiraolhogrego.jpeg",
-        descricao: "Amuleto protetor em prata 950, contra inveja e mau-olhado."
+        descricao: "Amuleto protetor em prata 925, contra inveja e mau-olhado."
     },
     {
         id: 38,
         nome: "Pulseira Santissimo",
         categoria: "pulseiras",
-        preco: 80.00,
+        preco: 0.00,
         imagem: "pulseirasantissimo.jpeg",
         descricao: "Símbolo eucarístico em prata 925, para fiéis que carregam sua fé."
     },
@@ -328,7 +328,7 @@ const produtos = [
     {
         id: 42,
         nome: "Trio brinco bolinha",
-        categoria: "trios",
+        categoria: "brincos",
         preco: 80.00,
         imagem: "triobrincobolinha.jpeg",
         descricao: "Conjunto de três tamanhos em prata 925, perfeito para múltiplas perfurações."
@@ -336,16 +336,16 @@ const produtos = [
     {
         id: 43,
         nome: "Trio coração",
-        categoria: "trios",
-        preco: 80.00,
+        categoria: "brincos",
+        preco: 60.00,
         imagem: "triocoracao.jpeg",
         descricao: "Três corações em prata 925, declare seu amor em diferentes tamanhos."
     },
     {
         id: 44,
         nome: "Trio pedrinha",
-        categoria: "trios",
-        preco: 319.90,
+        categoria: "brincos",
+        preco: 80.00,
         imagem: "triopedrinha.jpeg",
         descricao: "Pedras naturais em três designs em prata 925, harmoniosamente combinados."
     }
