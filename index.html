@@ -52,12 +52,11 @@
         
         <!-- Filtros de Categorias -->
         <div class="filtros">
-            <button class="ativo" data-categoria="todos">Todos</button>
-            <button data-categoria="aneis">Anéis</button>
-            <button data-categoria="colares">Colares</button>
-            <button data-categoria="brincos">Brincos</button>
-            <button data-categoria="pulseiras">Pulseiras</button>
-            <button data-categoria="berloques">Berloques</button>
+            <button data-categoria="aneis"><img src="/images-removebg-preview.png" alt="Anéis"> Anéis</button>
+            <button data-categoria="colares"><img src="/download-removebg-preview.png" alt="Colares"> Colares</button>
+            <button data-categoria="brincos"><img src="/brinco-removebg-preview.png" alt="Brincos"> Brincos</button>
+            <button data-categoria="pulseiras"><img src="pulseira-removebg-preview.png" alt="Pulseiras"> Pulseiras</button>
+            <button data-categoria="berloques"><img src="/berloque-removebg-preview.png" alt="Berloques"> Berloques</button>
         </div>
         
         <!-- Grade de Produtos (será preenchida via JavaScript) -->
@@ -73,11 +72,7 @@
                 <h2>Sobre a S.A PRATAS 925</h2>
                 <p>A S.A PRATAS 925 traz elegância e sofisticação em cada peça. Nossas joias são cuidadosamente selecionadas e fabricadas com os melhores materiais, garantindo qualidade e durabilidade.</p>
                 <p>Cada peça é única e pensada para celebrar momentos especiais. Trabalhamos com prata 925 de alta qualidade.</p>
-                
-                <!-- Botão de Contato via WhatsApp -->
-                <a href="https://wa.me/553899959880?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20Pratas%20" class="btn whatsapp-btn" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Fale Conosco
-                </a>
+
             </div>
             <div class="sobre-imagem">
                 <img src="logo.png" alt="Sobre a S.A PRATAS 925">
@@ -85,10 +80,8 @@
         </div>
     </section>
 
-    <!-- Seção de Contato -->
-    <section class="contato" id="contato">
-        <div class="contato-container">
-            <h2>Entre em Contato</h2>
+    <section class="contato" id="contato" style="display: flex; justify-content: center; align-items: center;">
+        <div class="contato-container" style="text-align: center;">
             <div class="contato-content">
                 <!-- Informações de Contato -->
                 <div class="contato-info">
@@ -96,31 +89,18 @@
                     <p>Tire todas suas dúvidas sobre nossos produtos, pedidos especiais ou personalizações.</p>
                     
                     <!-- Botão do WhatsApp -->
-                    <a href="https://wa.me/553899959880?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20SA%20pratas925" class="btn whatsapp-btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> (38) 9995-9880
-                    </a>
-
-                </div>
-                
-                <!-- Formulário de Contato -->
-                <div class="contato-form">
-                    <h3>Ou nos envie uma mensagem</h3>
-                    <form id="form-contato">
-                        <div class="form-group">
-                            <input type="text" id="nome" placeholder="Seu nome" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="Seu e-mail" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Enviar Mensagem</button>
-                    </form>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                        <a href="https://wa.me/553899959880?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20SA%20pratas925" class="btn whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> (38) 9995-9880
+                        </a>
+                        <a href="https://wa.me/553899959880?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20SA%20pratas925" class="btn whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> (38) 9995-9880
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section>>
 
     <!-- Modal do Carrinho de Compras (inicialmente oculto) -->
     <div class="carrinho-overlay" id="carrinho-overlay">
@@ -156,18 +136,15 @@
         </div>
     </div>
 
-    <!-- Botão Flutuante do WhatsApp (fixo na tela) -->
-    <a href="https://wa.me/553899959880?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20pratas%20925" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <!-- Rodapé -->
     <footer>
         <div class="footer-container">
             <div class="rodape-content">
                 <!-- Seção 1: Sobre a empresa -->
-                
-                
+                <div class="rodape-section">
+                    <h3>S.A PRATAS 925</h3>
+                    <p>Joias em prata 925 de alta qualidade, peças exclusivas e elegantes para todos os momentos especiais.</p>
+                </div>
                 
                 <!-- Seção 2: Links rápidos -->
                 <div class="rodape-section">
@@ -183,18 +160,18 @@
                 <!-- Seção 3: Informações de contato -->
                 <div class="rodape-section">
                     <h3>Atendimento</h3>
-                    <p><i class="fas fa-phone"></i> (38) 9 9995-9880</p>
-                    <p><i class="fas fa-phone"></i> (38) 9 8807-0509</p>
-                    <p><i class="fas fa-envelope"></i> S.A PRATAS 925.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Paracatu, MG</p>
+                    <p><a href="https://wa.me/553899959880" target="_blank" style="color: white; text-decoration: none;"><i class="fab fa-whatsapp"></i> (38) 9995-9880</a></p>
+                    <p><a href="https://wa.me/553899959880" target="_blank" style="color: white; text-decoration: none;"><i class="fab fa-whatsapp"></i> (38) 9995-9880</a></p>
+                    <p style="color: white;"><i class="fas fa-envelope"></i> S.A PRATAS 925.com</p>
+                    <p style="color: white;"><i class="fas fa-map-marker-alt"></i> Paracatu, MG</p>
                 </div>
                 
                 <!-- Seção 4: Redes sociais -->
                 <div class="rodape-section">
-                    <h3>Redes Sociais</h3>
+                    <h3>Rede Social</h3>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/simone_bs33?utm_source=qr&igsh=aGRpem83cHU1dXpq" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                        
                     </div>
                 </div>
             </div>
@@ -205,7 +182,6 @@
                 <div class="pagamento-methods">
                     <i class="fab fa-cc-visa"></i>
                     <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-amex"></i>
                     <i class="fab fa-cc-paypal"></i>
                 </div>
             </div>
