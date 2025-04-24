@@ -855,9 +855,7 @@ footer {
             height: 30px;
             margin-right: 6px;
         }
-         .filtros {
-        top: 210px; /* 10px a mais que a altura do header no mobile */
-    }
+        
     
 }
 
@@ -873,7 +871,9 @@ footer {
     .produtos {
         padding: 80px 5%;
     }
-
+    .filtros {
+        top: 200px; /* 10px a mais que a altura do header no mobile */
+    }
     .filtros button {
         height:5 ;
         margin: 5px;
@@ -929,9 +929,6 @@ footer {
     .footer-logo {
         height: 40px;
     }
-     .filtros {
-        top: 210px; /* 10px a mais que a altura do header no mobile */
-    }
 }
 
 @media (max-width: 480px) {
@@ -959,7 +956,7 @@ footer {
         display: flex;
         flex-direction: row;
     }
-     .filtros {
-        top: 210px; /* 10px a mais que a altura do header no mobile */
+    .filtros {
+        top: 200px; /* 10px a mais que a altura do header no mobile */
     }
 }
