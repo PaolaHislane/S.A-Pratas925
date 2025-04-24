@@ -191,10 +191,23 @@ nav ul li a:hover {
     transition: all 0.3s;
     font-size: 14px;
 }
-
+.filtros button img {
+    width: 100px;       /* Largura desejada */
+    height: 80px;      /* Altura desejada */
+    object-fit: contain; /* Mantém a proporção sem cortar */
+    margin-right: 4px; /* Espaço entre a imagem e o texto */
+    vertical-align: middle; /* Alinha a imagem com o texto */
+}
+.filtros button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+}
 .filtros button.ativo {
     background-color: #c0c0c0; /* Prata */
     color: white;
+    
 }
 
 .filtros button:hover {
@@ -826,6 +839,13 @@ footer {
         bottom: 20px;
         right: 20px;
     }
+   
+        .filtros button img {
+            width: 40px;    /* Reduz um pouco para tablets */
+            height: 30px;
+            margin-right: 6px;
+        }
+    
 }
 
 @media (max-width: 480px) {
@@ -863,6 +883,7 @@ footer {
     .hero p {
         font-size: 16px;
     }
+    
 }
 /* Estilos para o logo no header */
 .logo-img {
