@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Meta tags para configuração básica do documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S.A PRATAS 925</title>
-    
-    <!-- Links para folhas de estilo e fontes externas -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Cabeçalho/Navegação Principal -->
     <header>
         <div class="logo">
-            <!-- Logo em imagem com link para a home -->
             <a href="#home">
                 <img src="logo.png" alt="S.A PRATAS 925 - Joias em Prata 925 de Alta Qualidade" class="logo-img">
             </a>
@@ -27,7 +22,6 @@
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#contato">Contato</a></li>
                 <li>
-                    <!-- Botão do Carrinho com ícone e contador -->
                     <a href="#" id="carrinho-btn">
                         <i class="fas fa-shopping-cart"></i>
                         <span id="carrinho-contador">0</span>
@@ -37,7 +31,6 @@
         </nav>
     </header>
 
-    <!-- Banner Principal/Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
             <h2>Coleção Exclusiva 2025</h2>
@@ -46,12 +39,11 @@
         </div>
     </section>
 
-    <!-- Seção de Produtos -->
     <section class="produtos" id="produtos">
         <h2>Nossas Joias</h2>
         
-        <!-- Filtros de Categorias -->
         <div class="filtros">
+            
             <button data-categoria="aneis"><img src="/images-removebg-preview.png" alt="Anéis"> Anéis</button>
             <button data-categoria="colares"><img src="/download-removebg-preview.png" alt="Colares"> Colares</button>
             <button data-categoria="brincos"><img src="/brinco-removebg-preview.png" alt="Brincos"> Brincos</button>
@@ -59,13 +51,11 @@
             <button data-categoria="berloques"><img src="/berloque-removebg-preview.png" alt="Berloques"> Berloques</button>
         </div>
         
-        <!-- Grade de Produtos (será preenchida via JavaScript) -->
         <div class="grade-produtos" id="grade-produtos">
             <!-- Os produtos serão inseridos aqui dinamicamente -->
         </div>
     </section>
 
-    <!-- Seção Sobre a Empresa -->
     <section class="sobre" id="sobre">
         <div class="sobre-container">
             <div class="sobre-content">
@@ -79,23 +69,18 @@
         </div>
     </section>
 
-    <!-- Seção de Contato -->
     <section class="contato" id="contato" style="display: flex; justify-content: center; align-items: center;">
         <div class="contato-container" style="text-align: center;">
             <div class="contato-content">
-                <!-- Informações de Contato -->
                 <div class="contato-info">
                     <h3>Fale diretamente pelo WhatsApp</h3>
                     <p>Tire todas suas dúvidas sobre nossos produtos, pedidos especiais ou personalizações.</p>
                     
-                    <!-- Botões do WhatsApp -->
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                        <!-- Primeiro número -->
                         <a href="https://wa.me/553899959880?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20S.A%20PRATAS%20925" class="btn whatsapp-btn" target="_blank">
                             <i class="fab fa-whatsapp"></i> (38) 9995-9880
                         </a>
                         
-                        <!-- Segundo número -->
                         <a href="https://wa.me/5538988070509?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20S.A%20PRATAS%20925" class="btn whatsapp-btn" target="_blank">
                             <i class="fab fa-whatsapp"></i> (38) 9 8807-0509
                         </a>
@@ -105,19 +90,15 @@
         </div>
     </section>
 
-    <!-- Modal do Carrinho de Compras (inicialmente oculto) -->
     <div class="carrinho-overlay" id="carrinho-overlay">
         <div class="carrinho">
-            <!-- Botão para fechar o carrinho -->
             <button class="fechar-carrinho">&times;</button>
             <h2>Seu Carrinho</h2>
             
-            <!-- Lista de Itens do Carrinho (preenchida via JS) -->
             <div class="carrinho-itens" id="carrinho-itens">
                 <!-- Itens serão adicionados dinamicamente aqui -->
             </div>
             
-            <!-- Calculadora de Frete -->
             <div class="frete-calculadora">
                 <h3>Calcular Frete</h3>
                 <input type="text" id="cep-input" placeholder="Digite seu CEP" maxlength="9">
@@ -125,31 +106,26 @@
                 <div id="frete-resultado"></div>
             </div>
             
-            <!-- Resumo do Pedido -->
             <div class="carrinho-total">
                 <p>Subtotal: <span id="subtotal">R$ 0,00</span></p>
                 <p>Frete: <span id="frete-valor">R$ 0,00</span></p>
                 <p>Total: <span id="carrinho-total">R$ 0,00</span></p>
                 
-                <!-- Botão para finalizar compra via WhatsApp -->
-                <a href="https://wa.me/553899959880?text=Olá,%20gostaria%20de%20finalizar%20minha%20compra%20dos%20seguintes%20itens:" class="btn whatsapp-btn finalizar-compra" id="finalizar-whatsapp" target="_blank">
+                <a href="#" class="btn whatsapp-btn finalizar-compra" id="finalizar-whatsapp" target="_blank">
                     <i class="fab fa-whatsapp"></i> Finalizar pelo WhatsApp
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- Rodapé -->
     <footer>
         <div class="footer-container">
             <div class="rodape-content">
-                <!-- Seção 1: Sobre a empresa -->
                 <div class="rodape-section">
                     <h3>S.A PRATAS 925</h3>
                     <p>Joias em prata 925 de alta qualidade, peças exclusivas e elegantes para todos os momentos especiais.</p>
                 </div>
                 
-                <!-- Seção 2: Links rápidos -->
                 <div class="rodape-section">
                     <h3>Links Rápidos</h3>
                     <ul>
@@ -160,7 +136,6 @@
                     </ul>
                 </div>
                 
-                <!-- Seção 3: Informações de contato -->
                 <div class="rodape-section">
                     <h3>Atendimento</h3>
                     <p><a href="https://wa.me/553899959880?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20S.A%20PRATAS%20925" target="_blank" style="color: white; text-decoration: none;"><i class="fab fa-whatsapp"></i> (38) 9995-9880</a></p>
@@ -169,7 +144,6 @@
                     <p style="color: white;"><i class="fas fa-map-marker-alt"></i> Paracatu, MG</p>
                 </div>
                 
-                <!-- Seção 4: Redes sociais -->
                 <div class="rodape-section">
                     <h3>Rede Social</h3>
                     <div class="social-icons">
@@ -178,7 +152,6 @@
                 </div>
             </div>
             
-            <!-- Rodapé inferior (copyright e métodos de pagamento) -->
             <div class="rodape-bottom">
                 <p>&copy; 2025 S.A PRATAS 925. Todos os direitos reservados.</p>
                 <div class="pagamento-methods">
@@ -190,7 +163,6 @@
         </div>
     </footer>
 
-    <!-- Inclusão do arquivo JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
