@@ -855,7 +855,9 @@ footer {
             height: 30px;
             margin-right: 6px;
         }
-        
+         .filtros {
+        top: 210px; /* 10px a mais que a altura do header no mobile */
+    }
     
 }
 
@@ -927,6 +929,9 @@ footer {
     .footer-logo {
         height: 40px;
     }
+     .filtros {
+        top: 210px; /* 10px a mais que a altura do header no mobile */
+    }
 }
 
 @media (max-width: 480px) {
@@ -953,5 +958,8 @@ footer {
     .logoroda{
         display: flex;
         flex-direction: row;
+    }
+     .filtros {
+        top: 210px; /* 10px a mais que a altura do header no mobile */
     }
 }
