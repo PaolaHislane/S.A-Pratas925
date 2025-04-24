@@ -1,4 +1,3 @@
-// Dados dos Produtos
 const produtos = [
     // ANÉIS
     {
@@ -350,8 +349,9 @@ const produtos = [
         descricao: "Pedras naturais em três designs em prata 925, harmoniosamente combinados."
     }
 ];
+
 // Carrinho e Variáveis Globais
-let carrinho = [];
+let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 let frete = 0;
 
 // Elementos DOM
@@ -381,7 +381,7 @@ function carregarProdutos(categoria = 'todos') {
         const produtoElement = document.createElement('div');
         produtoElement.className = 'produto';
         produtoElement.innerHTML = `
-            <img src="${produto.imagem}" alt="${produto.nome}" class="produto-img">
+            <img src="${produto.imagem}" alt="${produto.nome}" class="produto-img" onerror="this.src='placeholder.jpg'">
             <div class="produto-info">
                 <h3>${produto.nome}</h3>
                 <p>${produto.descricao}</p>
@@ -444,10 +444,11 @@ function atualizarCarrinho() {
             const itemElement = document.createElement('div');
             itemElement.className = 'carrinho-item';
             itemElement.innerHTML = `
-                <img src="${item.imagem}" alt="${item.nome}">
+                <img src="${item.imagem}" alt="${item.nome}" onerror="this.src='placeholder.jpg'">
                 <div class="carrinho-item-info">
                     <h4>${item.nome}</h4>
                     <p>R$ ${item.preco.toFixed(2)} x ${item.quantidade}</p>
+                    <p>Subtotal: R$ ${(item.preco * item.quantidade).toFixed(2)}</p>
                 </div>
                 <span class="carrinho-item-remover" data-id="${item.id}">&times;</span>
             `;
@@ -468,21 +469,20 @@ function atualizarCarrinho() {
             removerDoCarrinho(parseInt(e.target.dataset.id));
         });
     });
+    
+    // Salvar no localStorage
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
 }
 
 // Cálculo de Frete
 function calcularFrete(cep) {
-    // Validação do CEP
     if (!cep || cep.length !== 9) {
         freteResultado.innerHTML = '<p style="color: #ff6b6b;">CEP inválido. Formato: 00000-000</p>';
         return;
     }
 
-    // Simulação de cálculo por região (valores fictícios)
     const regiao = cep.charAt(0);
     let prazo = '';
-
-    // Frete grátis para compras acima de R$ 1500
     const subtotal = carrinho.reduce((sum, item) => sum + (item.preco * item.quantidade), 0);
     
     if (subtotal > 1500) {
@@ -559,26 +559,10 @@ function mostrarNotificacao(mensagem) {
     }, 3000);
 }
 
-// Envio do formulário de contato
-document.getElementById('form-contato').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const mensagem = document.getElementById('mensagem').value;
-    
-    const textoWhatsApp = `Olá, meu nome é ${nome} (${email}). Gostaria de entrar em contato sobre:%0A%0A${mensagem}`;
-    
-    window.open(`https://wa.me/553899959880?text=${textoWhatsApp}`, '_blank');
-    
-    // Limpar formulário
-    this.reset();
-    mostrarNotificacao('Formulário enviado com sucesso!');
-});
-
 // Event Listeners
 carrinhoBtn.addEventListener('click', (e) => {
     e.preventDefault();
+    atualizarCarrinho();
     carrinhoOverlay.style.display = 'flex';
     document.body.style.overflow = 'hidden';
 });
@@ -601,36 +585,8 @@ carrinhoOverlay.addEventListener('click', (e) => {
 });
 
 // Inicializar
-carregarProdutos();
-
-// Adicionar estilo para notificações
-const style = document.createElement('style');
-style.textContent = `
-    .notificacao {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #d4af37;
-        color: white;
-        padding: 15px 25px;
-        border-radius: 5px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        z-index: 3000;
-        animation: slideIn 0.3s ease-out;
-    }
-    
-    .notificacao.fade-out {
-        animation: fadeOut 0.3s ease-out;
-    }
-    
-    @keyframes slideIn {
-        from { transform: translateX(100%); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-    }
-    
-    @keyframes fadeOut {
-        from { opacity: 1; }
-        to { opacity: 0; }
-    }
-`;
-document.head.appendChild(style);
+document.addEventListener('DOMContentLoaded', () => {
+    carregarProdutos();
+    // Atualizar contador do carrinho ao carregar a página
+    carrinhoContador.textContent = carrinho.reduce((sum, item) => sum + item.quantidade, 0);
+});
